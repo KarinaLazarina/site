@@ -4,6 +4,28 @@ $main-color: #393f4f;
 $bg-color: #f8f9fa;
 $header2-color: #2b303e;
 $header-color: #4e5c7e;
+
+@mixin sidebar{
+	color: $header2-color;
+	.row{
+		background: $header2-color;	
+		border-left: 3px solid #62baf0;		
+	}
+	p{
+		color: white;
+	}
+}
+@mixin mainfont($font-weight,$font-size,$color){
+	font-weight: $font-weight;
+	font-family: "Source Sans Pro";
+	font-size: $font-size;
+	color: $color;
+}
+@mixin align($height:100%){
+	display: flex;
+  	align-items: center;
+  	height: $height;
+}
 *{
 	margin:0;
 	padding:0;
@@ -12,45 +34,9 @@ body
 {
 	min-height: 100vh;
 }
-a{
-	.row{	
-		align-items: center;
-	}
-	img{
-		height: 15px;
-		width: 15px;
-		margin-left: 15px;
-		margin-right: 15px;
-		vertical-align: middle; 
-	}
-	p{
-		padding-top: 10px;
-		font-weight: 600;
-		font-family: "Source Sans Pro";
-		font-size: 15px;
-		color: #5a6378;
-	}
-	&:hover{
-		color: $header2-color;
-		.row{
-			background: $header2-color;	
-			border-left: 3px solid #62baf0;		
-		}
-
-		p{
-			font-weight: 600;
-			font-family: "Source Sans Pro";
-			font-size: 15px;
-			color: white;
-		}
-
-	}
-}
-img{
-	margin:15px;
-}
 .row{
 	display: flex;
+	justify-content: flex-start;
 	.first{
 		align-items: center;
 		img{
@@ -67,30 +53,86 @@ img{
 	margin:0;
 	min-height: 100vh;
 }
+a{
+	.row{	
+		align-items: center;
+	}
+	img{
+		height: 15px;
+		width: 15px;
+		margin-left: 15px;
+		margin-right: 15px;
+		vertical-align: middle; 
+	}
+	p{
+		padding-top: 10px;
+		@include mainfont(600, 15px, #5a6378);
+	}
+	&:hover{
+		@include sidebar;
+	}
+}
+.active{
+	@include sidebar;
+}
+
 .col-2{
+	img{
+		margin:15px;
+	}
 	background: $main-color;
 	flex-grow: 1;
 	.row{
 		padding:2px;
+		white-space: nowrap;
 	}
 }
 .col-10{
 	background: $bg-color;
 	flex-grow: 1;
 	.col{
-			border:2px solid grey;
+			border:2px solid $bg-color;
 			margin:10px;
 			border-radius: 5px;
+			background: white;
+			box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.2);
 	}
 	.third{
-		height: 20%;
-	
+		height: 20%;	
 	}
-
-}
+} 
 .header{
 	background: $header-color;
-	height: 50px;
+	@include align(50px);
+	p{
+		height: 50%;
+		@include mainfont(bold,15px,white);
+		margin-left: 25px;
+		margin-bottom: 0;
+	}
+	img{
+		margin-left: 10px;
+	}
+}
+.header_right{
+	img{
+		height: 70%;
+	}
+	@include align;
+	margin-left: auto;
+ 	margin-right: 0;
+ 	margin-top: 0;
+	.dropdown{
+		p{
+			margin-left: 0;
+		}
+		button{
+			@include align(50%);
+			background:$header-color;
+			border:2px solid $header-color;
+		}
+	}
+
 }
 .header2{
 	background: $header2-color;
