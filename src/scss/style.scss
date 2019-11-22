@@ -26,6 +26,11 @@ $blue1: #59a9c7;
   	align-items: center;
   	height: $height;
 }
+@mixin calendar{
+	border-radius:100px;
+	background:$blue1;
+  	border: 1px solid $blue1;
+}
 *{
 	margin:0;
 	padding:0;
@@ -62,34 +67,10 @@ body
 	background: $bg-color;
 	flex-grow: 1;
 }
-
 .row{
 	margin: 0;
 	padding:2px;
 }
-
-
-a{
-	img{
-		height: 15px;
-		width: 15px;
-		margin-left: 15px;
-		margin-right: 15px;
-		vertical-align: middle; 
-	}
-	p{
-		padding-top: 10px;
-		@include mainfont(600, 15px, #5a6378);
-	}
-	&:hover{
-		@include sidebar;
-	}
-}
-.active{
-	@include sidebar;
-}
-
-
 .block{
 	position:relative;
 	padding:10px;
@@ -111,19 +92,20 @@ a{
 		margin-top: 22px;
 	}
 }
-.text{
-	width: 70%;
-	float: right;
-	height: 100px;
-}
 .main2{
 	height: 80%;
 	margin-top: 10px;
 }
+
+// first line 
+.text{
+	width: 65%;
+	float: right;
+	height: 100px;
+}
 .sum{
 	float: left;
 	margin: 0;
-	margin-left: 15px;
 	margin-top: 15px;
 	display: inline-block;
 	@include mainfont(600, 40px, #5a6378);
@@ -145,6 +127,17 @@ a{
 	float: left;
 	margin-right: 25px;
 }
+// circle progressbar
+.dws-progress-bar {
+	float: left;
+	width: 30%;
+} 
+.progress-percentage {
+	@include mainfont(600, 20px, #5a6378);
+	 position: absolute;
+	 left: 12%;
+	 margin-top:10%;
+ }   
 .svetloe{
 	padding:0;
 }	
@@ -155,6 +148,28 @@ a{
 	}
 }		
 
+// sidebar
+a{
+	img{
+		height: 15px;
+		width: 15px;
+		margin-left: 15px;
+		margin-right: 15px;
+		vertical-align: middle; 
+	}
+	p{
+		padding-top: 10px;
+		@include mainfont(600, 15px, #5a6378);
+	}
+	&:hover{
+		@include sidebar;
+	}
+}
+.active{
+	@include sidebar;
+}
+
+// progressbar
 .prbar{
 	p{
 		@include mainfont(600, 15px, white);
@@ -203,7 +218,7 @@ a{
 	}
 }	
 
-
+// header1&2
 .header{
 	background: $header-color;
 	@include align(50px);
@@ -217,6 +232,13 @@ a{
 		margin-left: 10px;
 	}
 }
+.header2{
+	background: $header2-color;
+	height: 40px;
+	p{
+		@include mainfont(bold,15px,white);
+	}
+}
 .header_right{
 	img{
 		height: 70%;
@@ -225,11 +247,13 @@ a{
 	margin-left: auto;
  	margin-right: 0;
  	margin-top: 0;
+// button
  	.btn{
  		@include align(70%);
  		margin:5px;
  		border-radius: 25px;
  	}
+// dropdown
 	.dropdown{
 		p{
 			margin-left: 0;
@@ -241,17 +265,7 @@ a{
 	}
 
 }
-
-
-.header2{
-	background: $header2-color;
-	height: 40px;
-	p{
-		@include mainfont(bold,15px,white);
-	}
-}
-
-
+//search 
 .form-control{
 	background:$main-color;
 	height: 65%;
@@ -272,4 +286,81 @@ form{
     text-align: center;
     pointer-events: none;
     color: #aaa;
+}
+
+// calendar
+.fa-caret-right{
+	color: white;
+}
+.fa-caret-left{
+	color: white;
+}
+.calendar {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  	p{
+  		display: inline-block;
+  		@include mainfont(300,15px,white);
+  	}
+  	a{
+  		float: right;
+  		color: $blue1;
+  	}
+}
+
+.calendar_weekdays {
+	@include mainfont(600,17px,white);
+}
+.calendar_weekdays div {
+  display:inline-block;
+  vertical-align:top;
+}
+.calendar_weekdays div, .calendar_content div {
+  width: 14.28571%;
+  height: 45.7px;
+  line-height: 45.7px;  
+  overflow: hidden;
+  text-align: center;
+}
+.calendar_content div {
+	color: white;
+  float: left;
+  border: 1px solid transparent;
+}
+.calendar_content div:hover {
+	@include calendar;
+}
+.calendar_content div.today{
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  	@include calendar;
+}
+.calendar_content div.selected {
+  	border-radius:100px;
+	background:$blue1;
+  border: 1px solid $blue1;
+}
+.calendar_header {
+  width: 100%;
+  text-align: center;
+}
+
+.calendar_header h2 {
+  float:left;
+  width:70%;
+  margin-top: 10px;
+  padding: 0 10px;
+  @include mainfont(600,20px,white);
+}
+button.switch-month {
+	background-color:transparent;
+  padding: 0;
+  outline: none;
+  border: none;
+  line-height: 52px;
+  height: 55px;
+  float: left;
+  width:15%;
+  transition: color .2s;
 }

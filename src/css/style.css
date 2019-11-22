@@ -40,36 +40,6 @@ body {
   margin: 0;
   padding: 2px; }
 
-a img {
-  height: 15px;
-  width: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
-  vertical-align: middle; }
-
-a p {
-  padding-top: 10px;
-  font-weight: 600;
-  font-family: "Source Sans Pro";
-  font-size: 15px;
-  color: #5a6378; }
-
-a:hover {
-  color: #2b303e; }
-  a:hover .row {
-    background: #2b303e;
-    border-left: 3px solid #62baf0; }
-  a:hover p {
-    color: white; }
-
-.active {
-  color: #2b303e; }
-  .active .row {
-    background: #2b303e;
-    border-left: 3px solid #62baf0; }
-  .active p {
-    color: white; }
-
 .block {
   position: relative;
   padding: 10px;
@@ -90,19 +60,18 @@ a:hover {
     margin-left: 22px;
     margin-top: 22px; }
 
-.text {
-  width: 70%;
-  float: right;
-  height: 100px; }
-
 .main2 {
   height: 80%;
   margin-top: 10px; }
 
+.text {
+  width: 65%;
+  float: right;
+  height: 100px; }
+
 .sum {
   float: left;
   margin: 0;
-  margin-left: 15px;
   margin-top: 15px;
   display: inline-block;
   font-weight: 600;
@@ -133,6 +102,19 @@ a:hover {
   float: left;
   margin-right: 25px; }
 
+.dws-progress-bar {
+  float: left;
+  width: 30%; }
+
+.progress-percentage {
+  font-weight: 600;
+  font-family: "Source Sans Pro";
+  font-size: 20px;
+  color: #5a6378;
+  position: absolute;
+  left: 12%;
+  margin-top: 10%; }
+
 .svetloe {
   padding: 0; }
 
@@ -140,6 +122,36 @@ a:hover {
   padding: 0; }
   .temnoe .block {
     background: #393f4f; }
+
+a img {
+  height: 15px;
+  width: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  vertical-align: middle; }
+
+a p {
+  padding-top: 10px;
+  font-weight: 600;
+  font-family: "Source Sans Pro";
+  font-size: 15px;
+  color: #5a6378; }
+
+a:hover {
+  color: #2b303e; }
+  a:hover .row {
+    background: #2b303e;
+    border-left: 3px solid #62baf0; }
+  a:hover p {
+    color: white; }
+
+.active {
+  color: #2b303e; }
+  .active .row {
+    background: #2b303e;
+    border-left: 3px solid #62baf0; }
+  .active p {
+    color: white; }
 
 .prbar p {
   font-weight: 600;
@@ -211,6 +223,15 @@ a:hover {
   .header img {
     margin-left: 10px; }
 
+.header2 {
+  background: #2b303e;
+  height: 40px; }
+  .header2 p {
+    font-weight: bold;
+    font-family: "Source Sans Pro";
+    font-size: 15px;
+    color: white; }
+
 .header_right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -240,15 +261,6 @@ a:hover {
     background: #4e5c7e;
     border: 2px solid #4e5c7e; }
 
-.header2 {
-  background: #2b303e;
-  height: 40px; }
-  .header2 p {
-    font-weight: bold;
-    font-family: "Source Sans Pro";
-    font-size: 15px;
-    color: white; }
-
 .form-control {
   background: #393f4f;
   height: 65%;
@@ -269,3 +281,89 @@ form {
   text-align: center;
   pointer-events: none;
   color: #aaa; }
+
+.fa-caret-right {
+  color: white; }
+
+.fa-caret-left {
+  color: white; }
+
+.calendar {
+  font-family: "Source Sans Pro";
+  font-weight: 600; }
+  .calendar p {
+    display: inline-block;
+    font-weight: 300;
+    font-family: "Source Sans Pro";
+    font-size: 15px;
+    color: white; }
+  .calendar a {
+    float: right;
+    color: #59a9c7; }
+
+.calendar_weekdays {
+  font-weight: 600;
+  font-family: "Source Sans Pro";
+  font-size: 17px;
+  color: white; }
+
+.calendar_weekdays div {
+  display: inline-block;
+  vertical-align: top; }
+
+.calendar_weekdays div, .calendar_content div {
+  width: 14.28571%;
+  height: 45.7px;
+  line-height: 45.7px;
+  overflow: hidden;
+  text-align: center; }
+
+.calendar_content div {
+  color: white;
+  float: left;
+  border: 1px solid transparent; }
+
+.calendar_content div:hover {
+  border-radius: 100px;
+  background: #59a9c7;
+  border: 1px solid #59a9c7; }
+
+.calendar_content div.today {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  border-radius: 100px;
+  background: #59a9c7;
+  border: 1px solid #59a9c7; }
+
+.calendar_content div.selected {
+  border-radius: 100px;
+  background: #59a9c7;
+  border: 1px solid #59a9c7; }
+
+.calendar_header {
+  width: 100%;
+  text-align: center; }
+
+.calendar_header h2 {
+  float: left;
+  width: 70%;
+  margin-top: 10px;
+  padding: 0 10px;
+  font-weight: 600;
+  font-family: "Source Sans Pro";
+  font-size: 20px;
+  color: white; }
+
+button.switch-month {
+  background-color: transparent;
+  padding: 0;
+  outline: none;
+  border: none;
+  line-height: 52px;
+  height: 55px;
+  float: left;
+  width: 15%;
+  -webkit-transition: color .2s;
+  -o-transition: color .2s;
+  transition: color .2s; }

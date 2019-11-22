@@ -5,10 +5,10 @@
 	 <meta http-equiv="x-ua-compatible" content="ie=edge"> 
      <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800"> 
-        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-        <link rel="stylesheet" href="css/bootstrap.css"> 
-        <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800"> 
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="css/bootstrap.css"> 
+    <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
 
@@ -99,6 +99,7 @@
   <div class="body-layout">
     <div class="row main1">
             <div class="col block">
+              <div class="dws-progress-bar one" id="one"></div> 
               <div class="text">
                 <p class="sum">34</p>
                 <p class="total t">MONTHS</p> 
@@ -107,6 +108,7 @@
               </div>
             </div>
             <div class="col block">
+              <div class="dws-progress-bar two"></div> 
               <div class="text">
                 <p class="sum">13</p>
                 <p class="total t">PROJECTS</p> 
@@ -159,7 +161,24 @@
                   <div class="progress-bar" id="p5" role="progressbar" style="width: 69%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
-              <div class="row block"></div>
+              <div class="row block">
+                <div class="calendar calendar-second" id="calendar_second">
+                  <div class="calendar_header">
+                    <button class="switch-month switch-left">
+                      <i class="fa fa-caret-left" aria-hidden="true"></i>
+                    </button>
+                    <h2></h2>
+                    <button class="switch-month switch-right">
+                      <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="calendar_weekdays"></div>
+                  <div class="calendar_content"></div> 
+                  <p>Go get some money</p>  
+                  <a href="#">View task</a>   
+          </div>
+
+              </div>
             </div>
           </div>
   </div>
@@ -299,6 +318,8 @@
 
 	<script src="js/jquery.min.js"> </script> 
     <script src="js/popper.min.js"> </script> 
-    <script src="js/bootstrap.min.js"> </script> 
+    <script src="js/bootstrap.min.js"> </script>
+    <script src="js/script.js"></script>
+    <script src="js/plugin.js"></script>
 </body>
 </html>
