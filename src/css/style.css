@@ -28,7 +28,7 @@ body {
   right: 0; }
 
 .body-layout {
-  height: 100vh;
+  height: auto;
   margin-left: 200px;
   margin-top: 90px;
   background: #f8f9fa;
@@ -63,6 +63,46 @@ body {
 .main2 {
   height: 80%;
   margin-top: 10px; }
+  .main2 img {
+    margin-right: 5px; }
+
+#graf {
+  min-height: 368px; }
+
+table {
+  min-height: 420px; }
+
+.table th, .table td {
+  border: none; }
+
+thead {
+  -webkit-box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.2); }
+
+tr:hover {
+  -webkit-box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.2); }
+
+td {
+  font-weight: 500;
+  font-family: "Source Sans Pro";
+  font-size: 15px;
+  color: #949cb0; }
+
+.date {
+  font-weight: 500;
+  font-family: "Source Sans Pro";
+  font-size: 15px;
+  color: #59a9c7; }
+
+.completed {
+  color: #bfcb3d; }
+
+.rejected {
+  color: #fc9797; }
+
+.pending {
+  color: #ffbb6b; }
 
 .text {
   width: 65%;
@@ -153,55 +193,47 @@ a:hover {
   .active p {
     color: white; }
 
-.prbar p {
-  font-weight: 600;
-  font-family: "Source Sans Pro";
-  font-size: 15px;
-  color: white;
-  text-align: center;
-  width: 100%;
-  margin: 5px; }
-
-.prbar .blue {
-  font-weight: 600;
-  font-family: "Source Sans Pro";
-  font-size: 15px;
-  color: #59a9c7;
-  text-align: center;
-  width: 100%; }
-
-.prbar .progress {
-  width: 100%;
-  margin: 7px;
-  border-radius: 25px;
-  height: 10px; }
-
-.prbar .progress-bar {
-  border-radius: 25px; }
-
-.prbar #p1 {
-  background: #59a9c7; }
-
-.prbar #p2 {
-  background: #b6c647; }
-
-.prbar #p3 {
-  background: #fcb44c; }
-
-.prbar #p4 {
-  background: #f78ffe; }
-
-.prbar #p5 {
-  background: #f86a6a; }
-
-.prbar .left {
-  float: left; }
-
-.prbar .right {
-  margin-right: 5px;
-  margin-left: auto; }
-  .prbar .right p {
-    color: #5a6378; }
+.prbar {
+  min-height: 368px; }
+  .prbar p {
+    font-weight: 600;
+    font-family: "Source Sans Pro";
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin: 5px; }
+  .prbar .blue {
+    font-weight: 600;
+    font-family: "Source Sans Pro";
+    font-size: 15px;
+    color: #59a9c7;
+    text-align: center;
+    width: 100%; }
+  .prbar .progress {
+    width: 100%;
+    margin: 7px;
+    border-radius: 25px;
+    height: 10px; }
+  .prbar .progress-bar {
+    border-radius: 25px; }
+  .prbar #p1 {
+    background: #59a9c7; }
+  .prbar #p2 {
+    background: #b6c647; }
+  .prbar #p3 {
+    background: #fcb44c; }
+  .prbar #p4 {
+    background: #f78ffe; }
+  .prbar #p5 {
+    background: #f86a6a; }
+  .prbar .left {
+    float: left; }
+  .prbar .right {
+    margin-right: 5px;
+    margin-left: auto; }
+    .prbar .right p {
+      color: #5a6378; }
 
 .header {
   background: #4e5c7e;
@@ -289,6 +321,7 @@ form {
   color: white; }
 
 .calendar {
+  min-height: 430px;
   font-family: "Source Sans Pro";
   font-weight: 600; }
   .calendar p {

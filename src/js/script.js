@@ -32,7 +32,6 @@ $(document).ready(function () {
 //     }).circularProgress('animate', 68, 2500); 
 
 // }); 
-
 $( document ).ready(function() {
 		function c(passed_month, passed_year, calNum) {
 			var calendar = calNum == 0 ? calendars.cal1 : calendars.cal2;
