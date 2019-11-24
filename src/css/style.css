@@ -69,6 +69,22 @@ body {
 #graf {
   min-height: 368px; }
 
+.title {
+  font-weight: 600;
+  font-family: "Source Sans Pro";
+  font-size: 17px;
+  color: #5a6378;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  margin-top: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+#Chart {
+  margin-top: 20px; }
+
 table {
   min-height: 420px; }
 
@@ -76,6 +92,7 @@ table {
   border: none; }
 
 thead {
+  color: #5a6378;
   -webkit-box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.2); }
 

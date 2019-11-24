@@ -5,6 +5,7 @@ $bg-color: #f8f9fa;
 $header2-color: #2b303e;
 $header-color: #4e5c7e;
 $blue1: #59a9c7;
+$grey:#5a6378;
 @mixin sidebar{
 	color: $header2-color;
 	.row{
@@ -103,7 +104,17 @@ body
 #graf{
 	min-height: 368px;
 }
-
+.title{
+	@include mainfont(600,17px,$grey);
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    margin-top: 10px;
+    transform: translate(-50%, -50%);
+}
+#Chart{
+	margin-top: 20px;
+}
 // table
 table{
 	min-height: 420px;
@@ -112,6 +123,7 @@ table{
 	border:none;
 }
 thead{
+	color: $grey;
 	box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.2);
 }
 tr:hover{
@@ -143,10 +155,10 @@ td{
 	margin: 0;
 	margin-top: 15px;
 	display: inline-block;
-	@include mainfont(600, 40px, #5a6378);
+	@include mainfont(600, 40px, $grey);
 }	
 .total{
-	@include mainfont(600, 15px, #5a6378);
+	@include mainfont(600, 15px, $grey);
 	display: inline-block;
 	margin: 0;
 	margin-right: 15px;
@@ -168,7 +180,7 @@ td{
 	width: 30%;
 } 
 .progress-percentage {
-	@include mainfont(600, 20px, #5a6378);
+	@include mainfont(600, 20px, $grey);
 	 position: absolute;
 	 left: 12%;
 	 margin-top:10%;
@@ -194,7 +206,7 @@ a{
 	}
 	p{
 		padding-top: 10px;
-		@include mainfont(600, 15px, #5a6378);
+		@include mainfont(600, 15px, $grey);
 	}
 	&:hover{
 		@include sidebar;
@@ -247,7 +259,7 @@ a{
 	}
 	.right{
 		p{
-			color: #5a6378;
+			color: $grey;
 		}
 	margin-right: 5px;
 	margin-left: auto;
