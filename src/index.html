@@ -90,17 +90,29 @@
               <input class="form-control" type="search" placeholder="Search" aria-label="Search">
             </form>
             <div class="header_right">
-              <button type="button" class="btn btn-primary">
+              <button type="button" class="btn plus">
                 <p>Create new value</p>
-                <span class="oi oi-plus"></span>
+                <i class="fa fa-plus" aria-hidden="true"></i>
               </button>
             </div>
           </div>  
   </div>
   <div class="body-layout">
     <div class="row main1">
-            <div class="col block">
-              <div class="dws-progress-bar one" id="one"></div> 
+            <div class="col block circle">
+              <div class="progress" data-percentage="68">
+                <span class="progress-left">
+                  <span class="progress-bar bar1"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar bar1"></span>
+                </span>
+                <div class="progress-value">
+                  <div>
+                    68%
+                  </div>
+                </div>
+              </div>
               <div class="text">
                 <p class="sum">34</p>
                 <p class="total t">MONTHS</p> 
@@ -108,8 +120,20 @@
                 <p class="next">JOINED ON DECEMBER 2016</p>
               </div>
             </div>
-            <div class="col block">
-              <div class="dws-progress-bar two"></div> 
+            <div class="col block circle">
+              <div class="progress" data-percentage="39">
+                <span class="progress-left">
+                  <span class="progress-bar bar2"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar bar2"></span>
+                </span>
+                <div class="progress-value">
+                  <div>
+                    39%
+                  </div>
+                </div>
+              </div>
               <div class="text">
                 <p class="sum">13</p>
                 <p class="total t">PROJECTS</p> 
@@ -133,7 +157,7 @@
                 <p class="title">Champs of the month</p>
                 <canvas id="Chart"></canvas>
               </div>   
-              <div class="row block">
+              <div class="row block table1">
                 <table class="table">
                   <thead>
                     <tr>
@@ -215,7 +239,7 @@
                   <div class="progress-bar" id="p5" role="progressbar" style="width: 69%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
-              <div class="row block">
+              <div class="row block calendar1">
                 <div class="calendar calendar-second" id="calendar_second">
                   <div class="calendar_header">
                     <button class="switch-month switch-left">
@@ -237,143 +261,9 @@
           </div>
   </div>
 </div>
-
-
-	<!-- <div class="container-fluid">
-		<div class="row mainrow">
-  		  <div class="col-2">
-          <div class="row first">
-            <img src="photo/znak.png">     
-          </div>
-          <a href="#">
-            <div class="row">
-              <img src="photo/ikonka1.png">
-             <p>Report</p>
-            </div>
-          </a>
-          <a href="#" class="active">
-            <div class="row">
-              <img src="photo/ikonka2.png">
-              <p>Contract Report</p>
-            </div>
-          </a>
-          <a href="#">
-            <div class="row">
-              <img src="photo/ikonka3.png">
-              <p>Users</p>
-            </div>
-          </a>
-          <a href="#">
-            <div class="row">
-              <img src="photo/ikonka4.png">
-              <p>CRM</p>
-            </div>
-          </a>
-          <a href="#">
-            <div class="row">
-              <img src="photo/ikonka5.png">
-              <p>MDM</p>
-            </div>
-          </a>
-          <a href="#">
-            <div class="row">
-              <img src="photo/ikonka6.png">
-              <p>Plan Builder</p>
-            </div>
-          </a>
-          <a href="#">
-            <div class="row">
-              <img src="photo/ikonka7.png">
-              <p>Settings</p>
-            </div>
-          </a>  
-      </div>
-  		<div class="col-10">
-      	<div class="row header">
-            <p>
-              REPORTS
-              <img src="photo/strelochka.png">
-            </p>
-            <div class="header_right">
-              <img src="photo/header_1.png">
-              <img src="photo/header_2.png">
-              <div class="dropdown open">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <p>Vincent Vega</p>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </div>
-              <img src="photo/header_3.png">
-              <img src="photo/header_4.png">
-            </div>
-          </div>
-          <div class="row header2">
-            <form class="form-inline">
-              <span class="fa fa-search form-control-feedback"></span>
-              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            <div class="header_right">
-              <button type="button" class="btn btn-primary">
-                <p>Create new value</p>
-                <span class="oi oi-plus"></span>
-              </button>
-            </div>
-          </div>	
-      		<div class="row main3">
-      			<div class="col block">34</div>
-      			<div class="col block">13</div>
-      			<div class="col block">1023</div>
-      		</div>
-      		<div class="row main4">
-      			<div class="col-8 svetloe">
-              <div class="row block"></div>   
-              <div class="row block"></div>
-            </div>
-      			<div class="col-4 temnoe">
-              <div class="row block prbar">
-                <p>Month wise contract processed for 2017</p>
-                <p class="blue">Total contract processed</p>
-                <div class="left"><p>Contract#1</p></div>
-                <div class="right"><p>50%</p></div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <div class="left"><p>Contract#2</p></div>
-                <div class="right"><p>87%</p></div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <div class="left"><p>Contract#3</p></div>
-                <div class="right"><p>32%</p></div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <div class="left"><p>Contract#4</p></div>
-                <div class="right"><p>97%</p></div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 97%" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <div class="left"><p>Contract#5</p></div>
-                <div class="right"><p>59%</p></div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 69%" aria-valuenow="69" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-              <div class="row block"></div>
-            </div>
-      		</div>
-  		</div>
-  	</div>
-  </div>	-->
-
 	<script src="js/jquery.min.js"> </script> 
     <script src="js/popper.min.js"> </script> 
     <script src="js/bootstrap.min.js"> </script>
     <script src="js/script.js"></script>
-    <script src="js/plugin.js"></script>
 </body>
 </html>

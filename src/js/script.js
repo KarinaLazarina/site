@@ -1,122 +1,88 @@
-var speedCanvas = document.getElementById("Chart");
-
-Chart.defaults.global.defaultFontFamily = "Source Sans Pro";
-Chart.defaults.global.defaultFontSize = 16;
-
-var dataFirst = {
-    label: "Info 1",
-    data: [12, 16, 15, 27, 32, 9],
-    lineTension: 0.7,
-    fill: false,
-    borderColor: '#cfdb4e',
-    backgroundColor: 'transparent',
-    pointBorderColor: '#cfdb4e',
-    pointBackgroundColor: 'white',
-    pointRadius: 5,
-    pointHoverRadius: 7,
-    pointHitRadius: 20,
-    pointBorderWidth: 3,
-    pointStyle: 'Rounded'
-  };
-
-var dataSecond = {
-    label: "Info 2",
-    data: [15, 20, 28, 19, 16, 12],
-    fill: false,
- 	borderColor: '#5caee1',
- 	lineTension: 0.7,
-    backgroundColor: 'transparent',
-    pointBorderColor: '#5caee1',
-    pointBackgroundColor: 'white',
-    pointRadius: 5,
-    pointHoverRadius: 7,
-    pointHitRadius: 20,
-    pointBorderWidth: 3,
-    pointStyle: 'Rounded'
-  };
-
-var Data = {
-	showLines: false,
-  labels: [" ", "Oct 14-20", "Oct 21-27", "Oct 28-3", "Nov 4-10", " "],
-  datasets: [dataFirst, dataSecond],
-};
-
-var chartOptions = {
-	scales: {
-	    xAxes: [{
-	      gridLines: {
-	        drawOnChartArea: false,
-	        zeroLineColor: "transparent"
-	      }
-	    }],
-	    yAxes: [{
-	      ticks: {
-	        min: 0,
-	        max: 40,
-	        stepSize: 10
-	      },
-	    }]
-	},
-  legend: {
-    display: true,
-    position: 'bottom',
-    align:'start',
-    labels: {
-      boxWidth: 10,
-      fontColor: '#949cb0'
-    }
-  },
-  	title: {
-            display: true,
-            text: 'Average time of processing one contract',
-            fontColor: '#59a9c7',
-            fontStyle: 'regular'
-        }
-};
-
-var lineChart = new Chart(speedCanvas, {
-  type: 'line',
-  data: Data,
-  options: chartOptions
-});
-
-
-
-$(document).ready(function () {
-    $(".two").circularProgress({
-       color: "#d0db55",
-        line_width: 5,
-        height: "100px",
-        width: "100px",
-        percent: 0,
-        counter_clockwise: false,
-        starting_position: 50
-    }).circularProgress('animate', 39, 2500); 
-
-    $("#one").circularProgress({
-       color: "#5caee1",
-        line_width: 5,
-        height: "100px",
-        width: "100px",
-        percent: 0,
-        counter_clockwise: false,
-        starting_position: 50
-    }).circularProgress('animate', 68, 2500); 
-
-}); 
-// $(document).ready(function () {
-//     $(".one").circularProgress({
-//        color: "#5caee1",
-//         line_width: 5,
-//         height: "100px",
-//         width: "100px",
-//         percent: 0,
-//         counter_clockwise: false,
-//         starting_position: 50
-//     }).circularProgress('animate', 68, 2500); 
-
-// }); 
 $( document ).ready(function() {
+
+// chart
+	var speedCanvas = document.getElementById("Chart");
+
+	Chart.defaults.global.defaultFontFamily = "Source Sans Pro";
+	Chart.defaults.global.defaultFontSize = 16;
+
+	var dataFirst = {
+	    label: "Info 1",
+	    data: [12, 16, 15, 27, 32, 9],
+	    lineTension: 0.7,
+	    fill: false,
+	    borderColor: '#cfdb4e',
+	    backgroundColor: 'transparent',
+	    pointBorderColor: '#cfdb4e',
+	    pointBackgroundColor: 'white',
+	    pointRadius: 5,
+	    pointHoverRadius: 7,
+	    pointHitRadius: 20,
+	    pointBorderWidth: 3,
+	    pointStyle: 'Rounded'
+	  };
+
+	var dataSecond = {
+	    label: "Info 2",
+	    data: [15, 20, 28, 19, 16, 12],
+	    fill: false,
+	 	borderColor: '#5caee1',
+	 	lineTension: 0.7,
+	    backgroundColor: 'transparent',
+	    pointBorderColor: '#5caee1',
+	    pointBackgroundColor: 'white',
+	    pointRadius: 5,
+	    pointHoverRadius: 7,
+	    pointHitRadius: 20,
+	    pointBorderWidth: 3,
+	    pointStyle: 'Rounded'
+	  };
+
+	var Data = {
+		showLines: false,
+	  labels: [" ", "Oct 14-20", "Oct 21-27", "Oct 28-3", "Nov 4-10", " "],
+	  datasets: [dataFirst, dataSecond],
+	};
+
+	var chartOptions = {
+		scales: {
+		    xAxes: [{
+		      gridLines: {
+		        drawOnChartArea: false,
+		        zeroLineColor: "transparent"
+		      }
+		    }],
+		    yAxes: [{
+		      ticks: {
+		        min: 0,
+		        max: 40,
+		        stepSize: 10
+		      },
+		    }]
+		},
+	  legend: {
+	    display: true,
+	    position: 'bottom',
+	    align:'start',
+	    labels: {
+	      boxWidth: 10,
+	      fontColor: '#949cb0'
+	    }
+	  },
+	  	title: {
+	            display: true,
+	            text: 'Average time of processing one contract',
+	            fontColor: '#59a9c7',
+	            fontStyle: 'regular'
+	        }
+	};
+
+	var lineChart = new Chart(speedCanvas, {
+	  type: 'line',
+	  data: Data,
+	  options: chartOptions
+	});
+// calendar
 		function c(passed_month, passed_year, calNum) {
 			var calendar = calNum == 0 ? calendars.cal1 : calendars.cal2;
 			makeWeek(calendar.weekline);
